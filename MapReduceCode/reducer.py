@@ -22,8 +22,9 @@ for line in sys.stdin:
         # ignore/discard this line
         continue
 
-    # prepare mapper.py output to be sorted by Hadoop
-    # by key before it is passed to the reducer
+    # mapper.py output is sorted by Hadoop before it's feeded to
+    # reducer as input. Please sort manually if you are executing this
+    # without hadoop.
     if current_word == word:
         current_count += count
     else:
